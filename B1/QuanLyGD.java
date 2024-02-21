@@ -5,24 +5,29 @@ import java.util.List;
 
 public class QuanLyGD {
 
-        List<User> userList = new ArrayList<>();
-        List<GiaoDich> giaoDichList = new ArrayList<>();
+        List<User> userList;
+        List<GiaoDich> giaoDichList;
 
         private User currentUser;
 
-
-        public void registerUser(String phoneNumber, String name, String password) {
+        public QuanLyGD(){
+            userList = new ArrayList<>();
+            giaoDichList = new ArrayList<>();
+        }
+        public void registerUser(String phoneNumber, String name, String password, String role) {
             if (isUserExist(phoneNumber)) {
                 System.out.println("Số điện thoại đã tồn tại, hãy thử lại với số điện thoại khác!");
             } else {
                 User newUser = new User();
 
                 newUser.setPhoneNumber(phoneNumber);
+                newUser.setAccount(phoneNumber);
                 newUser.setPassword(password);
                 newUser.setName(name);
+                newUser.setRole(role);
                 userList.add(newUser);
 
-                System.out.println("Đăng kí thành công!");
+                System.out.println("Đăng kí thành công!"+newUser.getAccount());
             }
         }
 
@@ -59,6 +64,7 @@ public class QuanLyGD {
 
                     System.out.println("Số điện thoại: " + user.getPhoneNumber());
                     System.out.println("Tên: " + user.getName());
+                    System.out.println(" Quyền: " + user.getRole());
                     System.out.println("Số dư: " + user.getSoDu());
                     System.out.println("Tổng thu: " + user.getTongThu());
                     System.out.println("Tổng chi: " + user.getTongChi());
@@ -77,7 +83,9 @@ public class QuanLyGD {
                 giaoDich.setNgayGiaoDich(date);
                 giaoDich.setDonViLienQuan(relatedUnit);
                 giaoDich.setNguoiNhanTien(currentUser.getName());
+                giaoDich.setUserId(currentUser.getAccount());
                 giaoDichList.add(giaoDich);
+
 
                 currentUser.setSoDu(currentUser.getSoDu() + amount);
 
@@ -99,6 +107,7 @@ public class QuanLyGD {
                     giaoDich.setNgayGiaoDich(date);
                     giaoDich.setDonViLienQuan(relatedUnit);
                     giaoDich.setNguoiNhanTien(receiver);
+                    giaoDich.setUserId(currentUser.getAccount());
                     giaoDichList.add(giaoDich);
 
                     currentUser.setSoDu(currentUser.getSoDu() - amount);
@@ -106,7 +115,7 @@ public class QuanLyGD {
                     System.out.println("Giao dịch thành công!");
                 }
                 else {
-                    System.out.println("Hiện tại ngân quỹ chỉ còn"+currentUser.getSoDu() +" không đủ để chi");
+                    System.out.println("Hiện tại ngân quỹ chỉ còn" + currentUser.getSoDu() +" không đủ để chi");
                 }
             }
             else {
@@ -121,15 +130,37 @@ public class QuanLyGD {
                 System.out.println("Không có giao dịch nào!");
             }
             else {
-                for (GiaoDich giaoDich : giaoDichList) {
-                    System.out.println("Mã giao dịch: " + giaoDich.getMaGiaoDich());
-                    System.out.println("Tiêu đề: " + giaoDich.getTieuDe());
-                    System.out.println("Nội dung: " + giaoDich.getNoiDung());
-                    System.out.println("Số tiền: " + giaoDich.getSoTien());
-                    System.out.println("Ngày giao dịch: " + giaoDich.getNgayGiaoDich());
-                    System.out.println("Đơn vị liên quan: " + giaoDich.getDonViLienQuan());
-                    System.out.println("Người nhận tiền: " + giaoDich.getNguoiNhanTien());
-                    System.out.println("--------------------");
+                if(currentUser.getRole().equals("ADMIN"))
+                {
+                    for (GiaoDich giaoDich : giaoDichList) {
+                        System.out.println("Mã giao dịch: " + giaoDich.getMaGiaoDich());
+                        System.out.println("Tiêu đề: " + giaoDich.getTieuDe());
+                        System.out.println("Nội dung: " + giaoDich.getNoiDung());
+                        System.out.println("Số tiền: " + giaoDich.getSoTien());
+                        System.out.println("Ngày giao dịch: " + giaoDich.getNgayGiaoDich());
+                        System.out.println("Đơn vị liên quan: " + giaoDich.getDonViLienQuan());
+                        System.out.println("Người nhận tiền: " + giaoDich.getNguoiNhanTien());
+                        System.out.println("--------------------");
+                    }
+                }
+                else if(currentUser.getRole().equals("USER"))
+                {
+                    for (GiaoDich giaoDich : giaoDichList) {
+                        if(giaoDich.getUserId().equals(currentUser.getAccount()))
+                        {
+                            System.out.println("Mã giao dịch: " + giaoDich.getMaGiaoDich());
+                            System.out.println("Tiêu đề: " + giaoDich.getTieuDe());
+                            System.out.println("Nội dung: " + giaoDich.getNoiDung());
+                            System.out.println("Số tiền: " + giaoDich.getSoTien());
+                            System.out.println("Ngày giao dịch: " + giaoDich.getNgayGiaoDich());
+                            System.out.println("Đơn vị liên quan: " + giaoDich.getDonViLienQuan());
+                            System.out.println("Người nhận tiền: " + giaoDich.getNguoiNhanTien());
+                            System.out.println("--------------------");
+                        }
+//                        else {
+//                            System.out.println("User không có giao dịch nào!");
+//                        }
+                    }
                 }
             }
         }
@@ -152,9 +183,6 @@ public class QuanLyGD {
                 }
 
             }
-
-
-
         public void timkiemGiaoDich(String keyword) {
             for (GiaoDich giaoDich : giaoDichList) {
                 if (giaoDich.getTieuDe().contains(keyword) ||  String.valueOf(giaoDich.getSoTien()).contains(keyword)) {
@@ -169,8 +197,4 @@ public class QuanLyGD {
                 }
             }
         }
-
-
-
-
 }

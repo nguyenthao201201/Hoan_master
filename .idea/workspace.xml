@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ee06f34-cb20-40c1-bb11-5edae3b163e9" name="Changes" comment="" />
+    <list default="true" id="3ee06f34-cb20-40c1-bb11-5edae3b163e9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/B1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B1/GiaoDich.java" beforeDir="false" afterPath="$PROJECT_DIR$/B1/GiaoDich.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B1/QuanLyGD.java" beforeDir="false" afterPath="$PROJECT_DIR$/B1/QuanLyGD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B1/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/B1/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B1/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/B1/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B1/out/production/Hoan_master/GiaoDich.class" beforeDir="false" afterPath="$PROJECT_DIR$/B1/out/production/Hoan_master/GiaoDich.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B1/out/production/Hoan_master/QuanLyGD.class" beforeDir="false" afterPath="$PROJECT_DIR$/B1/out/production/Hoan_master/QuanLyGD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B1/out/production/Hoan_master/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/B1/out/production/Hoan_master/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B1/out/production/Hoan_master/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/B1/out/production/Hoan_master/main.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +28,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -25,21 +39,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Project_Learning/Hoan_master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Project_Learning/Hoan_master/B1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -50,6 +75,11 @@
       <updated>1707105023146</updated>
       <workItem from="1707105024185" duration="2371000" />
       <workItem from="1707115071672" duration="12778000" />
+      <workItem from="1707979871434" duration="208000" />
+      <workItem from="1707980093519" duration="509000" />
+      <workItem from="1707980614783" duration="143000" />
+      <workItem from="1708335495254" duration="51000" />
+      <workItem from="1708481273658" duration="33000" />
     </task>
     <servers />
   </component>

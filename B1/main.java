@@ -18,7 +18,6 @@ public class main {
             System.out.println("7. Xóa giao dịch");
             System.out.println("8. TÌm kiếm giao dịch");
 
-
             int choice = scanner.nextInt();
             scanner.nextLine();
 
@@ -32,7 +31,7 @@ public class main {
                 case 3:
                     chiTien(quanLyGD, scanner);
                     break;
-case 4:
+                case 4:
                     thuTien(quanLyGD, scanner);
                     break;
                     case 5:
@@ -41,15 +40,12 @@ case 4:
                     quanLyGD.hienThiUser();
                     break;
                 case 7:
-
                     xoaGiaoDich(quanLyGD, scanner);
                     break;
                     case 8:
                     timkiemGiaoDich(quanLyGD, scanner);
                 default:
                     System.out.println("Chức năng không tồn tại!");
-
-
             }
         }
     }
@@ -60,7 +56,9 @@ case 4:
         String name = scanner.nextLine();
         System.out.println("Nhập mật khẩu: ");
         String password = scanner.nextLine();
-        quanLyGD.registerUser(phoneNumber, name, password);
+        System.out.println("Nhập role:");
+        String role = scanner.nextLine();
+        quanLyGD.registerUser(phoneNumber, name, password, role);
     }
 
     public static void login (QuanLyGD quanLyGD, Scanner scanner) {

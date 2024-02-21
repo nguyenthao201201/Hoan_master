@@ -16,7 +16,9 @@ public class GiaoDich {
 
     private String nguoiNhanTien;
 
-    public GiaoDich(int maGiaoDich,Date ngayGiaoDich, String tieuDe, String loai,String noiDung, double soTien, String donViLienQuan, String nguoiNhanTien) {
+    private String userId;
+
+    public GiaoDich(int maGiaoDich,Date ngayGiaoDich, String tieuDe, String loai,String noiDung, double soTien, String donViLienQuan, String nguoiNhanTien, String userId) {
         this.maGiaoDich = maGiaoDich;
         this.ngayGiaoDich = ngayGiaoDich;
         this.loai = loai;
@@ -25,6 +27,7 @@ public class GiaoDich {
         this.soTien = soTien;
         this.donViLienQuan = donViLienQuan;
         this.nguoiNhanTien = nguoiNhanTien;
+        this.userId = userId;
     }
 
     public GiaoDich() {
@@ -64,6 +67,10 @@ public class GiaoDich {
         return nguoiNhanTien;
     }
 
+    public String getUserId() {
+        return userId;
+    }
+
     public void setMaGiaoDich(int maGiaoDich) {
         this.maGiaoDich = maGiaoDich;
     }
@@ -94,6 +101,10 @@ public class GiaoDich {
 
     public void setNguoiNhanTien(String nguoiNhanTien) {
         this.nguoiNhanTien = nguoiNhanTien;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
 
